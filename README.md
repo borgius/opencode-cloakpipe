@@ -4,6 +4,14 @@ OpenCode plugin for using [CloakPipe](https://github.com/borgius/cloakpipe) as a
 
 The plugin masks provider-bound prompt and tool-history text through CloakPipe, then restores placeholders in completed assistant text and local tool arguments.
 
+## Other CloakPipe plugins
+
+If you use a different coding tool, similar CloakPipe integrations are also available for:
+
+- [Claude Code (`claude-cloakpipe`)](https://github.com/borgius/claude-cloakpipe)
+- [Hermes (`hermes-cloakpipe`)](https://github.com/borgius/hermes-cloakpipe)
+- [Pi (`pi-cloakpipe`)](https://github.com/borgius/pi-cloakpipe)
+
 ## Why this differs from claude-cloakpipe
 
 Claude Code hooks cannot replace the prompt before Claude Code sends it to the provider, so `claude-cloakpipe` uses a local Anthropic-compatible gateway.
