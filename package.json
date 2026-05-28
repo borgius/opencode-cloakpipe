@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "opencode-cloakpipe",
+  "version": "0.1.0",
+  "description": "OpenCode plugin for CloakPipe prompt masking and local response restoration.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "opencode-cloakpipe": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "prepack": "npm test"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "cloakpipe",
+    "privacy",
+    "redaction",
+    "pseudonymization"
+  ],
+  "author": "borgius",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borgius/opencode-cloakpipe.git"
+  },
+  "homepage": "https://github.com/borgius/opencode-cloakpipe#readme",
+  "bugs": {
+    "url": "https://github.com/borgius/opencode-cloakpipe/issues"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.15.0"
+  },
+  "peerDependenciesMeta": {
+    "@opencode-ai/plugin": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.15.11",
+    "@types/node": "^22.15.0",
+    "typescript": "^5.9.0"
+  }
+}
